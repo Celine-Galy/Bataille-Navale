@@ -1,0 +1,208 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="css/game.css">
+  <link rel="stylesheet" href="css/modeDuo.css">
+  <meta charset="utf-8">
+  <link rel="icon" href="img/favicon.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
+  <script type="text/javascript" src="https://kit.fontawesome.com/0b93042111.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <section id="section_go">
+    <div> Vous ne verrez pas vos placement pendant la phase de jeux </div>
+    <button id="visual_board" class="fullbtn">Ok</button>
+  </section>
+  <!-- -->
+  <audio id="audioGame2" src="audio/epic-8-bit-boss-battle-music.mp3"loop=true></audio>
+  <section id="title_player1" class="hidden">
+
+    <div class="title hidden" id="title1P1"> <span class="namePlayer1" id="namePlayer1"></span> à toi de jouer !</div>
+    <div class="title" id="title2P1"> <span class="namePlayer1" id="namePlayer11"></span> à toi de placer tes bateaux</div>
+    <button id="btn_gamep1" class="fullbtn">Placer</button>
+    <button id="btn_gamep12" class="fullbtn hidden">Jouer</button>
+
+  </section>
+  <section id="section_hidden_P1" class="hidden">
+    <section id="section_player1" >
+      <div id='placeP1'> Placement des bateaux de <span class="namePlayer1" id="namePlayer13"></span></div>
+
+      <div class="elementPlacement">
+        <div id="nomovegame" class="hidden"></div>
+
+        <div class="placementGame" id="placementGeneralP1">
+          <div class="placemeentGrille">
+            <div id="game_board_mainP1">
+            </div>
+            <div id="game_board_main2P1">
+            </div>
+          </div>
+          <button id="btn_btn1P1" class="fullbtn">Validation du Placement </button>
+
+
+        </div>
+
+
+
+
+
+
+
+
+        <div id="placementexplication">
+
+          <div id="explicationGame" class="explication">
+            <video id="videoRepublique" autoplay>
+              <source src="img/explicationrepublique.mp4" type="video/mp4">
+              <p>Votre navigateur ne prend pas en charge les vidéos HTML5.
+              </p>
+            </video>
+            
+          </div>
+
+          <div id="bateauplacer" class="passagevertical">
+
+
+            <span class="placement" id="200000"><img class="draggable bateaunoturn" draggable="true" id="boat-1P1"
+                src="./img/vaisseau1Bleu.png"></span>
+
+            <span class="placement" id="200001"><img class="draggable bateaunoturn" draggable="true" id="boat-2P1"
+                src="./img/vaisseau2Bleu.png"></span>
+
+
+            <span class="placement" id="200002"><img class="draggable bateaunoturn" draggable="true" id="boat-3P1"
+                src="./img/vaisseau3Bleu.png"></span>
+
+            <span class="placement" id="200003"><img class="draggable bateaunoturn" draggable="true" id="boat-4P1"
+                src="./img/vaisseau3Bleu.png"></span>
+
+            <span class="placement" id="200004"><img class="draggable bateaunoturn" draggable="true" id="boat-5P1"
+                src="./img/vaisseau3Bleu.png"></span>
+
+
+          </div>
+          <button id="btn_btn2P1" class="fullbtn">Tourner vos Bateaux ?</button>
+
+        </div>
+      </div>
+
+    </section>
+  </section>
+
+
+
+  <section id="title_player2" class="hidden">
+
+    <div class="title hidden" id="title1P2"> <span class="namePlayer2" id="namePlayer2"></span> à toi de jouer !</div>
+    <div class="title" id="title2P2"> <span class="namePlayer2" id="namePlayer22"></span> à toi de placer tes bateaux</div>
+    <button id="btn_gamep2" type="submit">Placer</button>
+    <button id="btn_game2p2" class="hidden" type="submit">Jouer</button>
+
+  </section>
+  <section id="section_hidden_P2" class="hidden">
+    <section id="section_player2">
+
+      <div id='placeP2'> Placement des bateaux de <span class="namePlayer2" id="namePlayer23"></span></div>
+      <div class="elementPlacement">
+        <div id="nomovegame" class="hidden"></div>
+
+        <div class="placementGame" id="placementGeneralP2">
+
+          <div class="placemeentGrille">
+            <div id="game_board_mainP2">
+            </div>
+            <div id="game_board_main2P2">
+            </div>
+          </div>
+          <button id="btn_btn1P2" class="fullbtn">Validation du Placement </button>
+
+
+        </div>
+
+        <div id="placementexplication">
+
+          <div id="explicationGame" class="explication">
+            <video id="videoEmpire">
+              <source src="img/explicationempire.mp4" type="video/mp4" autoplay>
+              <p>Votre navigateur ne prend pas en charge les vidéos HTML5.
+              </p>
+            </video>
+          </div>
+
+          <div id="bateauplacer" class="passagevertical">
+
+
+            <span class="placement" id="30000"><img class="draggable bateaunoturn" draggable="true" id="boat-1P2"
+                src="./img/vaisseau1Rouge.png"></span>
+
+            <span class="placement" id="30001"><img class="draggable bateaunoturn" draggable="true" id="boat-2P2"
+                src="./img/vaisseau2Rouge.png"></span>
+
+
+            <span class="placement" id="30002"><img class="draggable bateaunoturn" draggable="true" id="boat-3P2"
+                src="./img/vaisseau3Rouge.png"></span>
+
+            <span class="placement" id="30003"><img class="draggable bateaunoturn" draggable="true" id="boat-4P2"
+                src="./img/vaisseau3Rouge.png"></span>
+
+            <span class="placement" id="30004"><img class="draggable bateaunoturn" draggable="true" id="boat-5P2"
+                src="./img/vaisseau3Rouge.png"></span>
+
+
+          </div>
+          <button id="btn_btn2P2" class="fullbtn">Tourner vos Bateaux ?</button>
+
+        </div>
+      </div>
+
+
+
+
+    </section>
+  </section>
+  <div class="hidden" id="gestionMusiqueDuo">
+    <button class="sound" id="playMusicGameDuo">
+    <i class="fas fa-volume-up"></i>
+</button>
+<button class="hidden"  id="mutedMusicGameDuo"><i class="fas fa-volume-mute"></i></button>
+</div>
+  <section id="playP1" class="hidden">
+    <div class="title_game">C'est <span class="namePlayer1"></span> qui joue !</div>
+    <div id="board_for_gameP1" class="sansvisuel"></div>
+
+  </section>
+
+
+  <section id="playP2" class="hidden">
+    <div class="title_game">C'est <span class="namePlayer2"></span> qui joue !</div>
+    <div id="board_for_gameP2" class="sansvisuel"></div>
+
+  </section>
+
+
+
+  <section id="sectionVictoireDuo" class="hidden">
+    <h1>Victoire</h1><p id="winner"></p>
+    <div class="btnBar">
+      <a href=page2.html class="btnBtnBar">Menu</a>
+        <button class="btnBtnBar" onclick='window.location.reload(false)'>Rejouer</button>
+    </div>
+</section>
+
+  <script src="js/modeDuo/gestionMusique.js"></script>
+  <script src="js/testStorage.js"></script>
+  <script src="js/modeDuo/variableDuo.js"></script>
+  <script src="js/modeDuo/duoGrille.js"></script>
+  <script src="js/modeDuo/placeBoat.js"></script>
+  <script src="js/modeDuo/playerTurn.js"></script>
+  <script src="js/randomCoupIA.js"></script>
+  <script src="js/modeDuo/duoBoatTurn.js"></script>
+  <script src="js/verifBoat.js"></script>
+  <script src="js/draganddrop.js"></script>
+
+
+</body>
+
+</html>
