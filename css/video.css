@@ -1,0 +1,97 @@
+html{
+    font-size: 18px;;
+}
+body {
+    font-family: 'Press Start 2P', cursive;
+    overflow: hidden;
+    background-color: #000000;
+}
+button{
+    width: 20%;  
+    height: 25%;
+    margin: 0 auto;
+    color: #FFFFFF;
+    background-color: #000000;
+    font-family: 'Press Start 2P', cursive;
+    margin-top: 3%;
+}
+#btnSkip:hover {
+    box-shadow: -3px 3px 0 #ffffff;
+}
+h1 {
+    color: #FFFFFF;
+}
+
+#player
+{
+    width: auto;
+    height: 100%;
+}
+#modale {
+    background-color: rgba(27, 26, 26, 0.521);
+    width: 30vw;
+    height: 25vh;
+    border: 1px solid #413f3faf;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%; /* à 50%/50% du parent référent */
+    transform: translate(-50%, -50%); /* décalage de 50% de sa propre taille */
+    z-index: 10;
+}
+.sonVideo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+video{
+    position: fixed; right: 0; bottom: 0;
+    min-width: 100%; min-height: 100%;
+    width: auto; height: auto; z-index: -100;
+    background: url(img/background.jpg), no-repeat;
+    background-size: cover;
+  }
+.hidden { 
+    display: none;
+}  
+#btnSkip {
+    position: absolute;
+    background-color: rgba(27, 26, 26, 0.521);
+    border: 1px solid #e0d4d477;
+    bottom: 10px;
+    right: 10px;
+    width: 15%;
+    height: 7%;
+    z-index: 1;
+}
+
+@media screen and (max-width: 900px) {
+    html 
+    {
+        font-size: 12px;
+    }
+    #modale 
+    {
+        width: 60vw;
+        height: 30vh;
+    }
+}
+
+@media screen and (max-width : 600px)
+{ 
+    #responsive
+    {
+        width: 100vw;
+        height: 100vh;
+        background-color: #3C383858;
+        display: block;
+        padding-top: 15%;
+        color: white;
+    }
+    #video
+    {
+        display: none;
+    }
+}

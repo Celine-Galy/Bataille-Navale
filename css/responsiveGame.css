@@ -1,0 +1,37 @@
+@media screen and (max-width : 600px)
+{ 
+    #responsive
+    {
+        width: 100vw;
+        height: 100vh;
+        background-color: #3C383858;
+        display: block;
+        padding-top: 15%;
+    }
+    #section_game 
+    {
+        display: none;
+    }
+    #title_game_player
+    {
+        display: none;
+    }
+}
+/*@media screen and (max-device-width : 600px)
+{ 
+    #responsive
+    {
+        width: 100vw;
+        height: 100vh;
+        background-color: #3C383858;
+        display: block;
+    }
+    #section_game 
+    {
+        display: none;
+    }
+    #title_game_player
+    {
+        display: none;
+    }
+}*/

@@ -1,0 +1,444 @@
+html
+{
+    font-size: 18px;
+}
+/*-------------------------------------------------main------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------*/
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url(../img/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+section {
+    color: #FFFFFF;
+    font-family: 'Press Start 2P';
+    height: 100vh;
+    width: 100vw;
+}
+.hidden {
+    display: none;
+}
+h1 {
+    font-size: 3rem;
+    padding-top: 8%;
+}
+h1,h2 {
+    text-align: center;
+}
+a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+input {
+    background-color: #000000;
+    color: #FFFFFF;
+    font-family:'Press Start 2P' , cursive ;
+    font-size: 1rem;
+    
+}
+label {
+    font-size: 0.75rem;
+    margin: 10%;
+}
+form {
+    height: 100%;
+    margin-top: 10%;
+}
+#container {
+    display: flex;
+    flex-direction: column;
+}
+.center {
+    text-align: center;
+}
+.titreVert {
+    color: #1cbb0e;
+}
+.titreRouge {
+    color: #f10606;
+}
+.sound {
+    position: absolute;
+    background-color:  #000000;
+    border :1px solid black;
+    top: 5px;
+    left: 1%;
+    color: #FFFFFF;
+    font-size: 1.5rem;
+}
+/*---------------------------------------------bouton--------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------*/
+.btn {
+    width: 50%;  
+    height: 10%;
+    margin: 0 auto;
+    color: #FFFFFF;
+    background-color: #000000;
+    font-family: 'Press Start 2P', cursive;
+}
+.btn:hover,.btnGame:hover,.btnBtnBar:hover,.return:hover {
+    box-shadow: -3px 3px 0 rgb(71, 71, 71);
+}
+.btnGame {
+    width: 30%;
+    height: 12%;
+    margin: 0 auto;
+    color: #FFFFFF;
+    background-color: #000000;
+    font-family: 'Press Start 2P', cursive;
+}
+.btnBtnBar {
+    
+    color: #FFFFFF;
+    background-color: #000000;
+    font-family: 'Press Start 2P', cursive;
+    width: 18%;
+    height: 10%;
+    margin: 0 auto;
+    margin-bottom: 10%;
+}
+.btnBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 10%;
+    
+}
+.return {
+    width: 6%;
+    height: 5%;
+    color: #FFFFFF;
+    background-color: #000000;
+    font-family: 'Press Start 2P', cursive;
+        position: absolute;
+        top: 1%;
+        right: 1%;
+}
+/*--------------------------------------------inscription----------------------------------------*/
+/*-----------------------------------------------------------------------------------------------*/
+.containerInscription {
+    background-color: rgba(27, 26, 26, 0.521);
+    border: 1px solid #413f3faf;
+    width: 50%;
+    height: 60%;
+    position: absolute;
+    top: 50%;
+    left: 50%; /* à 50%/50% du parent référent */
+    transform: translate(-50%, -50%); /* décalage de 50% de sa propre taille */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.containerInscription h1{
+  font-size: 1.2rem;
+}
+.containerInscription input {
+    width: 100%;
+    height: 85%;
+}
+.containerInscription .btnBtnBar {
+    height: 30%;
+}
+.gradient-border {
+    margin: 0 auto;
+    --border-width: 1px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 50%;
+    height: 30%;   
+} 
+    .gradient-border::after {
+      position: absolute;
+      content: "";
+      top: calc(-1 * var(--border-width));
+      left: calc(-1 * var(--border-width));
+      z-index: -1;
+      width: calc(100% + var(--border-width) * 2);
+      height: calc(100% + var(--border-width) * 2);
+      background: linear-gradient(
+        70deg,
+        hsl(224, 85%, 66%),
+        hsl(269, 85%, 66%),
+        hsl(314, 85%, 66%),
+        hsl(359, 85%, 66%),
+        hsl(44, 85%, 66%),
+        hsl(89, 85%, 66%),
+        hsl(134, 85%, 66%),
+        hsl(179, 85%, 66%)
+      );
+      background-size: 300% 300%;
+      background-position: 0 50%;
+      border-radius: calc(2 * var(--border-width));
+      animation: moveGradient 4s alternate infinite;
+    }
+  @keyframes moveGradient {
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+/*-----------------------------------------------------menu--------------------------------------*/
+/*-----------------------------------------------------------------------------------------------*/
+.containerMenu {
+    background-color: rgba(27, 26, 26, 0.521);
+    border: 1px solid #413f3faf;
+    width: 25%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 8% auto;
+}
+
+/*---------------------------------------------menu solo-----------------------------------------*/
+/*-----------------------------------------------------------------------------------------------*/
+.containerSolo {
+    background-color: rgba(27, 26, 26, 0.521);
+    border: 1px solid #413f3faf;
+    width: 30%;
+    height: 70%;
+    margin: 2rem auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.containerSolo h1,h2 {
+    font-size: 1rem;
+}
+.checkbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 4%;
+}
+.checkbox input {
+    margin: 0 auto;
+}
+.labelCheckbox {
+    display: grid;
+    align-content: center;
+
+}
+.checkboxEquipe {
+    flex-direction: column;
+}
+.checkboxEquipe label {
+    flex-direction: row;
+}
+/*-----------------------------------------------menu duo----------------------------------------*/
+/*-----------------------------------------------------------------------------------------------*/
+.menuDuoColumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height:80%;
+}
+.formDuo {
+    display: flex;
+}
+.containerDuo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.menuDuo {
+    text-align: center ;
+}
+.menuDuo input {
+    height: 30%;
+    margin-top: 4%;
+}.menuDuo label {
+    font-size:1rem;
+}
+/*---------------------------------------------------score---------------------------------------*/
+/*-----------------------------------------------------------------------------------------------*/
+
+.sectionScore  {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 90%;
+}
+.score {
+    background-color: rgba(27, 26, 26, 0.521);
+    width: 30%;
+    height: 75%;
+    border: 1px solid #5c5757;
+    margin-top: 4%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.score div {
+    margin-left: 5%;
+    font-size: 12px;
+}
+/*--------------------------------------------------game over------------------------------------*/
+/*-----------------------------------------------------------------------------------------------*/
+
+/*------------------------------------------------victoire---------------------------------------*/
+/*-----------------------------------------------------------------------------------------------*/
+#sectionVictoire {
+    text-align: center;
+}
+
+/*--------------------------------------------------options--------------------------------------*/
+/*-----------------------------------------------------------------------------------------------*/
+#sectionOptions h1{
+    font-size: 22px;
+    margin-top: 0;
+    margin-block-start: 0;
+}
+.btnOptions {
+    width: 15%;
+    color: #FFFFFF;
+    background-color: #000000;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.5rem;
+}
+.labelOptions {
+    text-align: center;
+    margin: 0;
+}
+.btnOptionsBar {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   height: 8%;
+}
+/*-------------------------------------------------multi-joueurs--------------------------------------*/
+/*----------------------------------------------------------------------------------------------------*/
+@media screen and (max-width: 900px) {
+    html 
+    {
+        font-size: 14px;
+    }
+    .containerInscription 
+    {
+        width: 90%;
+        height: 50%;
+    }
+    .btnBtnBar
+    {
+        padding: 2% 0;
+        width:30%;
+    }
+    .containerMenu
+    {
+        width: 60%;
+        height: 80% ;
+    }
+    .containerSolo
+    {
+        padding-top: 5%;
+        width: 60%;
+       margin-top: 10vh;
+    }
+    input
+    {
+        height: 7vh !important ;
+        font-size: 1rem;
+    }
+    .return
+    {
+        width: 20%;
+        height: 5%;
+        position: absolute;
+        top: 0;
+        right: 1vw;
+    }
+    .formDuo
+    {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .gradient-border::after
+    {
+        display: none;
+    }
+
+    form
+    {
+        margin-top: 5%;
+        margin-bottom: 4%;
+      height: 50%;
+    }
+    #btnJouerSolo
+    {
+        padding: 2% 0;
+    }
+
+    .menuDuoColumn
+    {
+        height: 100%;
+    }
+    .containerDuo
+    {
+        height: 90%;
+    }
+    .formDuo
+    {
+        padding-top: 5%;
+        height: 60%;
+    }
+
+    .sectionScore
+    {
+        padding-top: 5%;
+    }
+   #boby
+   {
+    padding-top: 0%!important ;
+   }
+}
+
+@media screen and (max-width : 600px)
+{ 
+    #responsive
+    {
+        width: 100vw;
+        height: 100vh;
+        background-color: #3C383858;
+        display: block;
+        padding-top: 15%;
+    }
+    #sectionOptions 
+    {
+        display: none;
+    }
+    #title_game_player
+    {
+        display: none;
+    }
+    #sectionScore
+    {
+        display: none;
+    }
+    #sectionVictoireDuo
+    {
+        display: none;
+    }
+    #ectionMulti
+    {
+        display: none;
+    }
+    #sectionMenuDuo
+    {
+        display: none;
+    }
+    #sectionMenuSolo
+    {
+        display: none;
+    }
+    #sectionMenu
+    {
+        display: none;
+    }
+    #sectionInscription
+    {
+        display: none;
+    }
+}
